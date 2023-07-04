@@ -38,7 +38,7 @@ int main()
         return -1;
     }
 
-    SDL_Color textColor = {0xf, 0xf, 0xf};
+    SDL_Color textColor = {0, 0, 0, 0};
     SDL_Surface *surface = TTF_RenderText_Solid(font, "Score is: 0", textColor);
     if (!surface)
     {
@@ -61,8 +61,6 @@ int main()
     square.w = 100;
     square.h = 100;
 
-    int speed = 2;
-    int direction = 1;
     const Uint8 *keyState = SDL_GetKeyboardState(NULL);
 
     SDL_Event event;
@@ -84,6 +82,7 @@ int main()
                 {
                     square.y -= 10;
                     square.x -= 10;
+                    
                 }
                 else if (keyState[SDL_SCANCODE_UP] && keyState[SDL_SCANCODE_RIGHT])
                 {

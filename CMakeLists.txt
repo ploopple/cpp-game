@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(CppGame)
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra --pedantic -std=c++23")
 
 set(SI "/opt/homebrew/include")
 set(SL "/opt/homebrew/lib/libSDL2.dylib")
